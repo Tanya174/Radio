@@ -4,6 +4,18 @@ import org.junit.jupiter.api.Assertions;
 public class RadioTest {
 
     @Test
+    public void shouldSetCurrentStationInRange(){
+        Radio radio = new Radio(99);
+
+        radio.setCurrentStation(98);
+
+        int expected = 98;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSetCurrentStation(){
         Radio radio = new Radio();
 
